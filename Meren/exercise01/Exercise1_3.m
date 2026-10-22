@@ -1,3 +1,4 @@
+clc; clear;
 x = [3 0 0 0
      7 4 0 0
      2 4 6 0
@@ -15,7 +16,8 @@ format long g
 %}
 
 function maxSum = maxpath(x)
-
+%each element get the larger of its two lower neighbors added to it. At
+%the end x(1, 1) holds the max path sum
 n= size(x, 1);
 for i = n-1: -1: 1
     for j = 1: i
